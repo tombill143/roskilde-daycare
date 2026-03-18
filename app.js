@@ -3,29 +3,29 @@
 // Sample kids data with group colors and parents
 // ----------------------------
 const kids = [
-  { name: "Angelina", age: 3, image: "images/Angelina.png", group: "Red", parents: "John & Mary" },
-  { name: "Billy", age: 4, image: "images/Billy.png", group: "Blue", parents: "Tom & Linda" },
-  { name: "Bjørn", age: 3, image: "images/Bjørn.png", group: "Yellow", parents: "Karl & Emma" },
-  { name: "Cecilia", age: 2, image: "images/Cecilia.png", group: "Green", parents: "Anna & Peter" },
-  { name: "Daniel", age: 4, image: "images/Daniel.png", group: "Red", parents: "Laura & Michael" },
-  { name: "Elias", age: 3, image: "images/Elias.png", group: "Blue", parents: "Sophia & Lucas" },
-  { name: "Emily", age: 2, image: "images/Emily.png", group: "Yellow", parents: "Nina & Oliver" },
-  { name: "Ezra", age: 3, image: "images/Ezra.png", group: "Green", parents: "Liam & Emma" },
-  { name: "Flora", age: 2, image: "images/Flora.png", group: "Red", parents: "Clara & Henry" },
-  { name: "Isiah", age: 4, image: "images/Isiah.png", group: "Blue", parents: "David & Grace" },
-  { name: "Jeannie", age: 3, image: "images/Jeannie.png", group: "Yellow", parents: "Olivia & Jack" },
-  { name: "Jon", age: 4, image: "images/Jon.png", group: "Green", parents: "Mia & Noah" },
-  { name: "Lasse", age: 3, image: "images/Lasse.png", group: "Red", parents: "Ethan & Sofia" },
-  { name: "Lua", age: 2, image: "images/Lua.png", group: "Blue", parents: "Ella & Samuel" },
-  { name: "Maria", age: 3, image: "images/Maria.png", group: "Yellow", parents: "Isabella & Liam" },
-  { name: "Mathias", age: 4, image: "images/Mathias.png", group: "Green", parents: "Lucas & Emily" },
-  { name: "Molly", age: 3, image: "images/Molly.png", group: "Red", parents: "Ava & Oliver" },
-  { name: "Monira", age: 2, image: "images/Monira.png", group: "Blue", parents: "Lily & Jacob" },
-  { name: "Noah", age: 3, image: "images/Noah.png", group: "Yellow", parents: "Chloe & Ethan" },
-  { name: "Polly", age: 2, image: "images/Polly.png", group: "Green", parents: "Zoe & Liam" },
-  { name: "Rod", age: 4, image: "images/Rod.png", group: "Red", parents: "Max & Anna" },
-  { name: "Sarah", age: 3, image: "images/Sarah.png", group: "Blue", parents: "Ella & Daniel" },
-  { name: "Stacy", age: 2, image: "images/Stacy.png", group: "Yellow", parents: "Mia & Leo" }
+  { name: "Angelina", age: 3, image: "images/Angelina.png", group: "Red", parents: "John & Mary", checkedIn: false },
+  { name: "Billy", age: 4, image: "images/Billy.png", group: "Blue", parents: "Tom & Linda", checkedIn: false },
+  { name: "Bjørn", age: 3, image: "images/Bjørn.png", group: "Yellow", parents: "Karl & Emma", checkedIn: false },
+  { name: "Cecilia", age: 2, image: "images/Cecilia.png", group: "Green", parents: "Anna & Peter", checkedIn: false },
+  { name: "Daniel", age: 4, image: "images/Daniel.png", group: "Red", parents: "Laura & Michael", checkedIn: false },
+  { name: "Elias", age: 3, image: "images/Elias.png", group: "Blue", parents: "Sophia & Lucas", checkedIn: false },
+  { name: "Emily", age: 2, image: "images/Emily.png", group: "Yellow", parents: "Nina & Oliver", checkedIn: false },
+  { name: "Ezra", age: 3, image: "images/Ezra.png", group: "Green", parents: "Liam & Emma", checkedIn: false },
+  { name: "Flora", age: 2, image: "images/Flora.png", group: "Red", parents: "Clara & Henry", checkedIn: false },
+  { name: "Isiah", age: 4, image: "images/Isiah.png", group: "Blue", parents: "David & Grace", checkedIn: false },
+  { name: "Jeannie", age: 3, image: "images/Jeannie.png", group: "Yellow", parents: "Olivia & Jack", checkedIn: false },
+  { name: "Jon", age: 4, image: "images/Jon.png", group: "Green", parents: "Mia & Noah", checkedIn: false },
+  { name: "Lasse", age: 3, image: "images/Lasse.png", group: "Red", parents: "Ethan & Sofia", checkedIn: false },
+  { name: "Lua", age: 2, image: "images/Lua.png", group: "Blue", parents: "Ella & Samuel", checkedIn: false },
+  { name: "Maria", age: 3, image: "images/Maria.png", group: "Yellow", parents: "Isabella & Liam", checkedIn: false },
+  { name: "Mathias", age: 4, image: "images/Mathias.png", group: "Green", parents: "Lucas & Emily", checkedIn: false },
+  { name: "Molly", age: 3, image: "images/Molly.png", group: "Red", parents: "Ava & Oliver", checkedIn: false },
+  { name: "Monira", age: 2, image: "images/Monira.png", group: "Blue", parents: "Lily & Jacob", checkedIn: false },
+  { name: "Catalina", age: 3, image: "images/Noah.png", group: "Yellow", parents: "Chloe & Ethan", checkedIn: false },
+  { name: "Polly", age: 2, image: "images/Polly.png", group: "Green", parents: "Zoe & Liam", checkedIn: false },
+  { name: "Rod", age: 4, image: "images/Rod.png", group: "Red", parents: "Max & Anna", checkedIn: false },
+  { name: "Sarah", age: 3, image: "images/Sarah.png", group: "Blue", parents: "Ella & Daniel", checkedIn: false },
+  { name: "Stacy", age: 2, image: "images/Stacy.png", group: "Yellow", parents: "Mia & Leo", checkedIn: false }
 ];
 
 // ----------------------------
@@ -209,6 +209,7 @@ const modalName = document.getElementById("modal-name");
 const modalAge = document.getElementById("modal-age");
 const modalGroup = document.getElementById("modal-group");
 const modalParents = document.getElementById("modal-parents");
+const modalStatus = document.getElementById("modal-status");
 const modalClose = document.getElementById("modal-close");
 
 function renderChildren() {
@@ -220,39 +221,74 @@ function renderChildren() {
     return;
   }
 
-  kids.forEach(kid => {
-    console.log("Rendering child:", kid.name, kid.image);
-    const card = document.createElement("div");
-    card.classList.add("card");
+kids.forEach(kid => {
+  console.log("Rendering child:", kid.name, kid.image);
+  const card = document.createElement("div");
+  card.classList.add("card");
 
-    // Test image exists
-    const img = new Image();
-    img.src = kid.image;
-    img.alt = kid.name;
-    img.onerror = () => console.warn("Image failed to load:", kid.image);
+  // Optional: visual status border
+  card.style.border = kid.checkedIn ? "2px solid green" : "2px solid red";
 
-    card.appendChild(img);
-    const p = document.createElement("p");
-    p.textContent = `${kid.name}, Age ${kid.age}`;
-    card.appendChild(p);
+  // Image
+  const img = new Image();
+  img.src = kid.image;
+  img.alt = kid.name;
+  img.onerror = () => console.warn("Image failed to load:", kid.image);
+  card.appendChild(img);
 
-    card.addEventListener("click", () => {
-      modalImage.src = kid.image;
-      modalImage.alt = kid.name;
-      modalName.textContent = kid.name;
-      modalAge.textContent = `Age: ${kid.age}`;
-      modalGroup.textContent = `Group: ${kid.group} Group`;
-      modalParents.textContent = `Parents: ${kid.parents}`;
-      modal.classList.remove("hidden");
-    });
+  // Name + age
+  const p = document.createElement("p");
+  p.textContent = `${kid.name}, Age ${kid.age}`;
+  card.appendChild(p);
 
-    container.appendChild(card);
-  });
+  // ✅ Status text
+  const status = document.createElement("p");
+  status.textContent = kid.checkedIn ? "🟢 Checked In" : "🔴 Checked Out";
+  status.style.fontSize = "0.9rem";
+  card.appendChild(status);
+
+// ✅ Check-in button
+const btn = document.createElement("button");
+btn.textContent = kid.checkedIn ? "Check Out" : "Check In";
+
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();   // prevent card click (modal)
+  e.preventDefault();    // extra safety
+
+  console.log("Clicked:", kid.name); // 👈 debug
+
+  toggleCheckIn(kid);
+});
+
+card.appendChild(btn);
+
+  // Modal click (unchanged)
+card.addEventListener("click", () => {
+  modalImage.src = kid.image;
+  modalImage.alt = kid.name;
+  modalName.textContent = kid.name;
+  modalAge.textContent = `Age: ${kid.age}`;
+  modalGroup.textContent = `Group: ${kid.group} Group`;
+  modalParents.textContent = `Parents: ${kid.parents}`;
+  modalStatus.textContent = kid.checkedIn ? "🟢 Checked In" : "🔴 Not Checked In"; // ✅ show status
+  modal.classList.remove("hidden");
+});
+
+  container.appendChild(card);
+});
 }
 
 // Close modal
 modalClose.addEventListener("click", () => modal.classList.add("hidden"));
 modal.addEventListener("click", e => { if (e.target === modal) modal.classList.add("hidden"); });
+
+// ----------------------------
+// Toggle check-in status for a child
+// ----------------------------
+function toggleCheckIn(kid) {
+  kid.checkedIn = !kid.checkedIn; // flip the status
+  renderChildren();               // re-render the list to update UI
+}
 
 // ----------------------------
 // Render notifications
