@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Roskilde Daycare</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🏫 Roskilde Daycare</h1>
+    <nav>
+      <button id="dashboard-btn">Dashboard</button>
+      <button id="children-btn">My Children</button>
+      <button id="notifications-btn">Notifications (<span id="notif-count">0</span>)</button>
+    </nav>
+  </header>
+
+  <!-- Weather & Date/Time bar -->
+  <div id="weather-bar" class="weather-bar">
+    <div class="weather-info">
+      🌡️ Temperature: <span id="current-weather">--°C</span>
+    </div>
+    <div class="date-time">
+      📅 <span id="current-date">--</span> ⏰ <span id="current-time">--:--</span>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <main>
+    <!-- Dashboard section -->
+    <section id="dashboard" class="section">
+      <div class="dashboard-welcome">
+        <h2>Welcome to Roskilde Daycare!</h2>
+        <p>See upcoming activities and announcements.</p>
+      </div>
+
+      <!-- Birthday card -->
+      <div id="birthday-card" class="card birthday-card"></div>
+
+      <!-- Lunch Menu card -->
+      <div id="lunch-card" class="card lunch-card">
+        <h3>🍴 Today's Lunch</h3>
+        <div id="lunch-menu">
+          <!-- JS will populate menu items here -->
+        </div>
+      </div>
+
+      <!-- Activities Table -->
+      <h3>Today's Activities</h3>
+      <table id="activities-table">
+        <thead>
+          <tr>
+            <th>Red Group</th>
+            <th>Blue Group</th>
+            <th>Yellow Group</th>
+            <th>Green Group</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JS will populate rows here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Children section -->
+    <section id="children" class="section hidden">
+      <h2>My Children</h2>
+      <div id="children-list" class="card-grid"></div>
+    </section>
+
+    <!-- Notifications section -->
+    <section id="notifications" class="section hidden">
+      <h2>Notifications</h2>
+      <div id="notif-list" class="notification-feed"></div>
+    </section>
+  </main>
+
+  <!-- Child Info Modal -->
+  <div id="child-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="modal-close">&times;</span>
+      <img id="modal-image" src="" alt="" />
+      <h3 id="modal-name"></h3>
+      <p id="modal-age"></p>
+      <p id="modal-group"></p>
+      <p id="modal-parents"></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
